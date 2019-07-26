@@ -9,7 +9,8 @@ class App extends React.Component{
       headers:{
         Authorization: 'Client-ID 900bf2ecf7afb1ef1054563580032883f22be39b655a1fbe1309b9c95678699e'
       }
-
+    }).then((response) => {
+      console.log(response.data.results);
     });
   }
   render(){
