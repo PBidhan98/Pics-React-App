@@ -6,11 +6,13 @@ class ImageCard extends React.Component{
 
     this.imageRef = React.createRef();
   }
-//called after the component is rendered.
+
   componentDidMount() {
-    //reaching into DOM through ref system.
+    this.imageRef.current.addEventListener('load', this.setSpans);
+  }
+
+  setSpans = () => {
     console.log(this.imageRef.current.clientHeight);
-    //too early for getting height bcoz we do not have the image loaded up...
   }
 
   render() {
